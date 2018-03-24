@@ -1,0 +1,10 @@
+version: '3'
+services:
+  workers:
+    build: workers/.
+    networks:
+      - coco
+    volumes:
+      - ./workers:/coco_workers:cached
+networks:
+  coco:
